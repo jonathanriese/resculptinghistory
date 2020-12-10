@@ -100,8 +100,9 @@ a.next {
 
 #yes-container{
   color: white;
-  background-color: rgba(0,0,0,.5);
-  backdrop-filter: blur(2px);
+  background-color: rgba(79, 79, 79,.6);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
 }
 
 .loading{
