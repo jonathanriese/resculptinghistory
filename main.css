@@ -98,15 +98,10 @@ a.next {
   opacity: 0;
 }
 
-#no-container{
-  color: white;
-  background-color: rgba(0,0,0,.5);
-
-}
-
 #yes-container{
   color: white;
-  /* background-color: rgba(255,0,0,.25); */
+  background-color: rgba(0,0,0,.5);
+  backdrop-filter: blur(2px);
 }
 
 .loading{
