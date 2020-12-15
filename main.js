@@ -1,14 +1,17 @@
-
 // the link to your model locally or the link from Teachable Machines
 const URL = "./tm-my-image-model/";
 const flip = false;
 const limit = 0.2;
 const noEl = document.getElementById("no-container");
 const yesEl = document.getElementById("yes-container");
-const audioEl = document.getElementById("fanfare");
 //-------------------------------------------------------
 let model, webcam, labelContainer, maxPredictions;
 let lastLabel = "none";
+
+// create variable for the last time we swapped divs
+let lastTime = Date.now();
+// variable for the minimum time we show a new state
+let minTime = 3000; // 3000 = 3 seconds (3000 milliseconds)
 
 function swapDivs(label) {
   // console.log(label);
@@ -20,6 +23,15 @@ function swapDivs(label) {
 
   if (lastLabel == label)
     return;
+
+  // test if current time - last swap time is less than our min time limit
+  // if less, return to end function
+  //console.log(Date.now() - lastTime);
+  if (Date.now() - lastTime < minTime)
+    return;
+
+  // if not, we want to change the lastTime to the current time
+  lastTime = Date.now();
 
   if (label == noLabel) {
     // hide yes, show no
