@@ -104,7 +104,7 @@ a.next {
 
 #yes-container{
   color: white;
-  background-color: rgba(79, 79, 79,.6);
+  background-color: rgba(51, 51, 51, 0.6);
   backdrop-filter: blur(5px);
   border-radius: 12px;
 }
@@ -125,7 +125,6 @@ a.next {
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid #B4DBFF;
-  ; /* Blue */
   border-radius: 50%;
   width: 120px;
   height: 120px;
